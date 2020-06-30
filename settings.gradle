@@ -1,0 +1,4 @@
+include ':Jokes'
+include ':JokesDisplay'
+include ':app',':backend'
+rootProject.name = "BuildItBigger"
