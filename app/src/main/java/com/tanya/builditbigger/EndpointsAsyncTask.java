@@ -14,13 +14,13 @@ import java.io.IOException;
 
 public class EndpointsAsyncTask extends AsyncTask<Void, Void, String> {
     private static MyApi myApiService = null;
-    private SendJokes mSendJokes;
+    private JokeTransfer mJokes;
 
-    public EndpointsAsyncTask(SendJokes sendJokes){
-        mSendJokes = sendJokes;
+    public EndpointsAsyncTask(JokeTransfer sendJokes){
+        mJokes = sendJokes;
     }
-    public interface SendJokes{
-        void onFinish(String joke);
+    public interface JokeTransfer{
+        void tellAJoke(String joke);
     }
 
     @Override
@@ -61,6 +61,6 @@ public class EndpointsAsyncTask extends AsyncTask<Void, Void, String> {
 
     @Override
     protected void onPostExecute(String result) {
-        mSendJokes.onFinish(result);
+        mJokes.tellAJoke(result);
     }
 }
