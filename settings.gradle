@@ -1,4 +1,3 @@
-include ':Jokes'
-include ':JokesDisplay'
-include ':app',':backend'
+
+include ':app',':backend',':JokesDisplay',':JokesLib'
 rootProject.name = "BuildItBigger"
