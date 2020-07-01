@@ -9,7 +9,7 @@ public class Jokes {
 
 
         static List<String> jokes = new ArrayList<>();
-        public static String getJokes(){
+        public  String getJokes(){
             Random random = new Random();
             int index = random.nextInt(jokes.size());
             return jokes.get(index);
